@@ -22,7 +22,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: "Playfair Display", 'Times New Roman', Times, serif;
 }
 
@@ -84,4 +85,9 @@ header {
 .company-icons img[src$=".svg"] {
     width: 1em;
     cursor: pointer;
+}
+
+main {
+    align-self: baseline;
+    margin: 0 20em;
 }
