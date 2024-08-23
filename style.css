@@ -13,6 +13,7 @@
     --header-portrait-size: 18em;
     --header-content-size: 30em;
     --project-size: 18rem;
+    --footer-portrait-size: 40em;
 }
 
 body {
@@ -79,7 +80,7 @@ header {
     line-height: 1.5;
 }
 
-.company-icons {
+header .company-icons {
     place-self: end;
     display: flex;
     justify-content: flex-end;
@@ -140,4 +141,53 @@ main h2 {
 
 .project .desc-title .project-icons img {
     width: 1.2rem;
+}
+
+footer {
+    font-size: 1.3rem;
+    color: white;
+    background-color: var(--header-bg);
+    display: flex;
+    gap: 10vw;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+    padding: 3em;
+    justify-content: center;
+}
+
+div.contact-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+
+div.contact div {
+    margin-bottom: 2em;
+}
+
+div.contact div.phone,
+div.contact div.email {
+    display: flex;
+    gap: 0.5em;
+    align-items: flex-end;
+    max-height: 1lh;
+    margin-bottom: 1em;
+}
+
+div.phone img,
+div.email img {
+    width: 1em;
+}
+
+footer img {
+    max-width: var(--footer-portrait-size);
+}
+
+footer .company-icons {
+    display: flex;
+    gap: 1em;
+}
+
+footer .company-icons img[src$=".svg"] {
+    width: 4rem;
 }
