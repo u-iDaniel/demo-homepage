@@ -12,6 +12,7 @@
     --portrait-aspect-ratio: 3/2;
     --header-portrait-size: 18em;
     --header-content-size: 30em;
+    --project-size: 18rem;
 }
 
 body {
@@ -19,12 +20,16 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
+    gap: 8em;
 }
 
 h1,
 h2,
-h3 {
+h3,
+.project-container .project .screenshot {
     font-family: "Playfair Display", 'Times New Roman', Times, serif;
+    font-weight: lighter;
 }
 
 header {
@@ -60,7 +65,6 @@ header {
     position: relative;
     top: -1.5em;
     text-align: center;
-    font-weight: lighter;
 }
 
 .header-content {
@@ -83,11 +87,57 @@ header {
 }
 
 .company-icons img[src$=".svg"] {
-    width: 1em;
+    width: 1.5rem;
     cursor: pointer;
 }
 
 main {
     align-self: baseline;
-    margin: 0 20em;
+    margin: 0 10em;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+}
+
+main h2 {
+    font-size: 2rem;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--project-size), 1fr));
+    gap: 4em;
+    margin-top: 1em;
+}
+
+.project-container .project {
+    box-shadow: rgba(0, 0, 0, 0.2) 0 6px 20px;
+}
+
+.project .screenshot {
+    font-size: 2.5rem;
+    color: white;
+    height: auto;
+    text-align: center;
+    padding: 1.5em 1em;
+}
+
+.project .description {
+    padding: 10px 20px 4em;
+}
+
+.project .desc-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.project .desc-title .project-icons {
+    cursor: pointer;
+    display: flex;
+    gap: 0.5em;
+}
+
+.project .desc-title .project-icons img {
+    width: 1.2rem;
 }
