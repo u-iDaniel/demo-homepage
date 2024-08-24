@@ -21,7 +21,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
     gap: 8em;
 }
 
@@ -35,16 +34,22 @@ h3,
 
 header {
     padding: 4%;
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: center;
 }
 
-.header-background {
-    width: 114vw;
-    height: 40em;
+/* Header background  */
+header::before {
+    content: '';
     background-color: var(--header-bg);
     position: absolute;
-    transform: rotate(-5deg);
-    top: -25vh;
-    left: -10vw;
+    top: -20vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(-15vh) skewY(-10deg);
     z-index: -1;
 }
 
