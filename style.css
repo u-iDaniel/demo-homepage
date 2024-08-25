@@ -36,11 +36,11 @@ header::before {
     content: '';
     background-color: var(--header-bg);
     position: absolute;
-    top: -20vh;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    transform: translateY(-15vh) skewY(-10deg);
+    clip-path: polygon(0 0, 100% 0%, 100% 45%, 0 100%);
     z-index: -1;
 }
 
