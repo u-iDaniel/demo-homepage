@@ -214,7 +214,7 @@ footer .company-icons img[src$=".svg"] {
     }
 
     .header-content {
-        width: min(100vw - 40px, 400px);
+        max-width: min(100vw - 80px, 400px);
         margin: auto;
         margin-top: 1em;
     }
